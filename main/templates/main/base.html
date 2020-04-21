@@ -1,27 +1,106 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js">
-  <!--<![endif]-->
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="" />
-  </head>
-  <body>
-    <!--[if lt IE 7]>
-      <p class="browsehappy">
-        You are using an <strong>outdated</strong> browser. Please
-        <a href="#">upgrade your browser</a> to improve your experience.
-      </p>
-    <![endif]-->
-    {% block content %} {% endblock content %}
-
-    <script src="" async defer></script>
-  </body>
+{% load bootstrap4 %}
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% bootstrap_css %} {% bootstrap_javascript jquery='full' %}
+    <title>Lessia's Lessons</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href=" {% static 'main/CSS/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'main/CSS/main.css' %}">
+</head>
+<body>
+    <header id="header" class="header">
+        <div class="container">
+    
+            <div class="row">
+                <div id='hov' class="col-lg-3 hov">
+                    <img src="{% static 'main/img/logo.png' %}" alt="Tinyone" class="logo animated fadeInUp">
+                </div>
+                <div class="col-lg-5 ml-auto">
+                    <nav>
+                        <ul class="menu d-flex justify-content-center animated fadeInDown">
+                            <li class="menu__item">
+                                <a href="{% url 'main:index' %}">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="{% url 'main:about' %}">
+                                    About us
+                                </a>
+                            </li>
+                            {% if uses.is_authenticated %}
+                            <li class="menu__item">
+                                <a href="{% url 'main:post_create' %}">
+                                    Post
+                                </a>
+                            </li>
+                            {% endif %}
+                            
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-lg-6">
+    
+                    <div class="offer animated fadeInLeft">
+                        <h1 class="offer__title">
+                            Inspire your inspiration
+                        </h1>
+                        <div class="offer__intro">
+                            Simple to use for your app, products<br>showcase and your inspiration
+                        </div>
+                        <p class="offer__text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis venenatis. Proin viverra risus a eros volutpat tempor. In quis arcu et eros porta lobortis sit
+                        </p>
+                        <ul class="icons d-flex">
+                            <li class="icons__item">
+                                <a href="#">
+                                    <i class="fa fa-apple"></i>
+                                </a>
+                            </li>
+                            <li class="icons__item">
+                                <a href="#">
+                                    <i class="fa fa-android"></i>
+                                </a>
+                            </li>
+                            <li class="icons__item">
+                                <a href="#">
+                                    <i class="fa fa-windows"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                </div>
+                <div class="col-lg-5 ml-auto">
+                    <img src=" {% static 'main/img/ipad-new.png' %}" class="ipad animated fadeInRight" alt="iPad">
+                </div>
+            </div>
+    
+        </div>
+    </header>
+    
+    {% block content %}
+      
+    {% endblock content %}
+    <footer id="footer" class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="credits">
+                  developed by EakzIT 
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+</body>
 </html>
