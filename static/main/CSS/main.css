@@ -251,3 +251,6 @@ h2 {
     background-size: cover;
     border-radius: 5vw;
 }
+.navbar{
+    border: 5px solid  #fcdb00;
+}
