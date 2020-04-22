@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     # Custom apps:
     'main',
+    'users',
     # Third party apps:
     'bootstrap4',
     # Default apps:
@@ -124,7 +125,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR,'static'),]
-LOGIN_URL = '/login/'
+LOGIN_URL = 'users:login'
 
 # Heroku settings.
 import django_heroku

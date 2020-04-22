@@ -1,0 +1,8 @@
+{% extends "main/base.html" %}
+
+{% block content %}
+    {% for post in post_list %}
+      <a href="{% url 'main:post_detail' post.pk %}">{{post}}</a>
+      <hr>
+    {% endfor %}
+{% endblock content %}

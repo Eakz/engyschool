@@ -1,0 +1,27 @@
+{% extends "main/base.html" %} 
+{% load bootstrap4 %} 
+{% load static %}
+{% block page_header %}
+<h5>Please register</h5>
+{% endblock page_header %} 
+{% block content %}
+<div class="container">
+  <div class="row">
+    <h1>Registration</h1>
+  </div>
+<div class="book1" style="background-image: url({% static 'main/img/book1.jpg' %});">
+
+<div class="col-md-5 ml-auto form-page mb-3 pb-3 pt-2" >
+<form class="form-horizontal mt-5 mb-5" action="{% url 'users:register' %}" method="POST">
+  {% csrf_token %} {% bootstrap_form form %} {% buttons %}
+  <button class="btn btn-success btn-outline-amber" name="submit">
+    Register
+  </button>
+  {% endbuttons %}
+  <input type="hidden" name="next" value="{% url 'main:index' %}" />
+</form>
+</div>
+</div>
+
+</div>
+{% endblock content %}
