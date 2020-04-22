@@ -62,10 +62,13 @@
             vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis
             venenatis.
           </p>
+          <a href="{% url 'main:post_list' %}">ALL POSTS</a> -
+
         </div>
       </div>
     </div>
     <div class="row">
+      
         {% for post in posts %}
       <div class="col-lg-4">
         <div class="feature d-flex">
