@@ -1,20 +1,25 @@
-{% extends "main/base.html" %}
-{% load bootstrap4 %}
-
+{% extends "main/base.html" %} {% load bootstrap4 %} {% load static %} 
 {% block page_header %}
-  <h2>Log in to your account.</h2>
-{% endblock page_header %}
-{% block content %}
+<h2>Log in to your account.</h2>
+{% endblock page_header %} {% block content %}
 
-<div class="container" style="padding-bottom: 100px;">
-<form class='form' action="{% url 'users:login' %}" method="POST">
-   {% csrf_token %}
-    {% bootstrap_form form %}
-  {% buttons %}
-  <button class="btn btn-primary" name="submit">Log in..</button>
-  {% endbuttons %}
-  <input type="hidden" name="next" value="{% url 'main:index' %}" />
-</form>
+<div
+  class="container book1"
+  style="
+    padding-bottom: 100px;
+    background-image: url({% static 'main/img/flag.png' %});"
+>
+  <form
+    class="form form__input"
+    action="{% url 'users:login' %}"
+    method="POST"
+    style="background-color: #fcdb00;"
+  >
+    {% csrf_token %} {% bootstrap_form form %} {% buttons %}
+    <button class="form__btn" name="submit">Log in..</button>
+    {% endbuttons %}
+    <input type="hidden" name="next" value="{% url 'main:index' %}" />
+  </form>
 </div>
-<hr>
+<hr />
 {% endblock content %}
