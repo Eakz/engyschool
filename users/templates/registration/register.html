@@ -12,8 +12,8 @@
 <div class="container">
 
 <div class="col-md-12">
-  <form class='book1 form form__input' action="{% url 'users:register' %}" method="POST" style="background-image: url({% static 'main/img/flag.jpg' %});">
-    {% csrf_token %} {% bootstrap_form form %} {% buttons %}
+<form class="form form__input" action="{% url 'users:register' %}" method="POST">
+  {% csrf_token %} {% bootstrap_form form %} {% buttons %}
   <button class="form__btn" name="submit">
     Register
   </button>
