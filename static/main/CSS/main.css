@@ -1,6 +1,7 @@
 #hov{
     background-color: wheat;
     border-radius: 25vw;
+    box-sizing: border-box;
 }
 #hov:hover{
     background-color: #fcdb00;
