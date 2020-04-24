@@ -16,6 +16,8 @@
     />
     <link rel="stylesheet" href=" {% static 'main/CSS/animate.css' %}" />
     <link rel="stylesheet" href="{% static 'main/CSS/main.css' %}" />
+    <script src="{% static 'main/js/master.js' %}"></script>
+
   </head>
   <body>
     {% with url_name=request.resolver_match.url_name %}
@@ -104,5 +106,6 @@
         </div>
       </div>
     </footer>
+    <script src="{% static 'main/js/master.js' %}"></script>
   </body>
 </html>

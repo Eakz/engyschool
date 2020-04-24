@@ -58,6 +58,14 @@
 </div>
 </header>
 <section id="features" class="features">
+  <div class="container-3">
+    <h2>Поки чекаєш, спробуй щастя!</h2>
+    <div class="flex-box-rps" id="flex-box-rps-div">
+        <img src="{% static 'main/img/paper.png' %}" alt="paper" id="paper" onclick="rpsGame(this)">
+        <img src="{% static 'main/img/rock.png' %}" alt="paper" id="rock" onclick="rpsGame(this)">
+        <img src="{% static 'main/img/scissors.png' %}" alt="paper" id="scissors" onclick="rpsGame(this)">
+    </div>
+  </div>
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
@@ -136,4 +144,5 @@
     </div>
   </div>
 </section>
+
 {% endblock content %}
