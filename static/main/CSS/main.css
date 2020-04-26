@@ -258,7 +258,11 @@ h2 {
 .navbar{
     border: 5px solid  #fcdb00;
 }
-
+.login{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 
 /* FOr the game */
 .container-1,
@@ -269,7 +273,6 @@ h2 {
     margin: 0 auto;
     text-align: center;
 }
-.flex-box-container-1,
 .flex-box-container-2,
 .flex-box-rps {
     display: flex;
