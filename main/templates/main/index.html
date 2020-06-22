@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="{% static 'main/css/carousel.css' %}">
+  <link rel="stylesheet" href="{% static 'main/css/navbar.css' %}">
+  <link rel="stylesheet" href="{% static 'main/css/typewriter.css' %}">
+  <link rel="stylesheet" href="{% static 'main/css/scroll.css' %}">
+  <style>
+    *{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #333333;
+    color: #ffffff;
+    line-height: 1.6;
+    height: 100vh;
+    overflow: hidden;
+}   
+.containeri{
+    width: 100%;
+}
+section {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+width: 100%;
+height: 100vh;
+scroll-snap-align: center;
+overflow: hidden;
+}
+hr{
+    margin: 0 auto;
+    border-top: 3px solid rgba(255, 255, 255, 0.3);
+    width: 80vw;
+    
+}
+section h1{
+font-size: 4rem;
+}
+section p {
+font-size: 1.5rem;
+}
+/* Section Images */
+section#home{
+    overflow: hidden;
+}
+section #vod {
+    position: absolute;
+    z-index: -1;
+    width: 200vh;
+}
+section#service{
+    background: url('{% static "main/img/1.jpg" %}') no-repeat center center/cover;
+}
+section#contact {
+    background: url('{% static "main/img/2.jpg" %}') no-repeat center center/cover;
+}
+@media screen and (max-width:768px){
+    section #vod{
+        height: auto;
+        width: 200vh;
+    }
+
+}
+.jumbotron1{
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+  </style>
+  <title>English School</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
+
+    <div class="logo">
+      <a class="navbar-brand" href="#home">
+        Lets Go<span class="sr-only">(current)</span>
+      </a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler1"
+      aria-controls="navbarToggler1" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarToggler1">
+      <ul class="navlinks navbar-nav ml-auto mt-2 mt-lg-1">
+        <li class="nav-item"><a class="nav-link" href="#about"><div class="wrapper"><span>Курси</span></div></a></li>
+        <li class="nav-item"><a class="nav-link" href="#service"><div class="wrapper"><span>F.A.Q.</span></div></a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact"><div class="wrapper"><span>Контакти</span></div></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div data-spy="scroll" data-target=".navbar" data-offset="50" class="containeri">
+    <section class="container-fluid" id="home">
+      <video id="vod" src="{% static 'main/img/vid1.mp4' %}" autoplay muted loop></video>
+      <div class="jumbotron1">
+      <h1>Let's Go це:<br/>
+        <span class="txt-type" data-wait='3000' data-words='["навчання","спілкування","само-удосконалення"]'></span><span class="dash">&nbsp</span>
+      </h1>
+      <br>
+      <hr>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo nesciunt explicabo nihil, cum necessitatibus
+        dolorem consequatur consequuntur soluta eius optio!</p>
+      </div>
+      </section>
+
+    <section class="container-fluid px-0" id="about">
+      <div class="container-fluid px-0">
+        <div id="carouselControls" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+              <div class="d-flex align-items-center justify-content-center min-vh-100">
+                <img class="min-vh-100" src="{% static 'main/img/a1.jpg' %}" alt="Los Angeles">
+                <div class="carousel-caption">
+                  <div class="jumbotron">
+                    <h3>Los Angeles</h3>
+                    <p>We had such a great time in LA!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="d-flex align-items-center justify-content-center min-vh-100">
+                <img class="min-vh-100" src="{% static 'main/img/a2.jpg' %}" alt="Los Angeles">
+                <div class="carousel-caption">
+                  <div class="jumbotron">
+                    <h3>Los Angeles</h3>
+                    <p>We had such a great time in LA!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="d-flex align-items-center justify-content-center min-vh-100">
+                <img class="min-vh-100" src="{% static 'main/img/a3.jpg' %}" alt="Los Angeles">
+                <div class="carousel-caption">
+                  <div class="jumbotron">
+                    <h3>Los Angeles</h3>
+                    <p>We had such a great time in LA!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="d-flex align-items-center justify-content-center min-vh-100">
+                <img class="min-vh-100" src="{% static 'main/img/a4.jpg' %}" alt="Los Angeles">
+                <div class="carousel-caption">
+                  <div class="jumbotron">
+                    <h3>Los Angeles</h3>
+                    <p>We had such a great time in LA!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="d-flex align-items-center justify-content-center min-vh-100">
+                <img class="min-vh-100" src="{% static 'main/img/a5.jpg' %}" alt="Los Angeles">
+                <div class="carousel-caption">
+                  <div class="jumbotron">
+                    <h3>Los Angeles</h3>
+                    <p>We had such a great time in LA!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="container-fluid" id="service">
+      <h1>Welcome To My Site</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo nesciunt explicabo nihil, cum necessitatibus
+        dolorem consequatur consequuntur soluta eius optio!</p>
+    </section>
+    <section class="container-fluid" id="contact">
+      <p style="margin-top: 10rem;background: rgba(0, 0, 0, 0.4);border: none;border-radius: 10px;padding: 10px;">Чекаємо вас по адресу: <br> м.Хмельницький, <br> вул.Синіх Карапузів 2, кв.1</p>
+        <!-- https://www.google.com/maps/embed/v1/view?key=AIzaSyBM3fx3CCkam1zKRs84mSF6slgFOA_tENA&center=49.435231,27.001573 -->
+        <div style="overflow:hidden;resize:none;width:90vw;height:500px;border-radius: 10px;"><div id="gmapdisplay" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=khmelnitsky&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><a class="googlemaps-html" href="https://www.embed-map.com" id="grab-mapdata">https://www.embed-map.com</a><style>#gmapdisplay img{max-height:none;max-width:none!important;background:none!important;}</style></div>
+        <div style="width: 100vw;height: 5rem;background:rgba(0, 0, 0, 0.6);">&copy; EAkzit</div>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+    <script src="{% static 'main/js/typewriter.js' %}"></script>
+</body>
+
+</html>
