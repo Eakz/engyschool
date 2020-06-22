@@ -25,7 +25,7 @@ SECRET_KEY = '89z3jvr8jh$x6w!1)n--0%r7+bmzzrog(6ff-0&0t=#ii^i8qz'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','localhost']
+ALLOWED_HOSTS = ['127.0.0.1','localhost','eakzit.site']
 
 
 # Application definition
@@ -80,8 +80,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'engyschool',
-        'USER': 'eakzit',
-        'PASSWORD': 'donaldduck',
+        'USER': 'paul',
+        'PASSWORD': 'timormortis',
         'HOST': 'localhost',
         'PORT': '5433',
     }
