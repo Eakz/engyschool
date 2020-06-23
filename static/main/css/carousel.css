@@ -1,0 +1,14 @@
+
+.carousel-caption{
+    top: 80vh;
+    height: 10rem;
+}
+/* BS4 corrections*/
+.jumbotron {
+    background-color: rgba(0, 0, 0, 0.4 );
+}
+@media screen and (max-width:768px){
+    .jumbotron{
+    position: relative;
+    bottom: 10rem;
+}}

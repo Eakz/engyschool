@@ -1,0 +1,11 @@
+.txt-type{
+    font-size: 2rem;
+}
+/* Cursor */
+.txt-type>.txt{
+    animation: blink 1.5s linear;
+}
+@keyframes blink{
+    from,to {border-right: 0.2rem solid #cccccc;}
+    50% {border-right: 0.2rem solid transparent;}
+}

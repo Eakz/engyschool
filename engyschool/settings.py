@@ -25,7 +25,7 @@ SECRET_KEY = '89z3jvr8jh$x6w!1)n--0%r7+bmzzrog(6ff-0&0t=#ii^i8qz'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','localhost','eakzit.site']
+ALLOWED_HOSTS = ['127.0.0.1','localhost','eakzit.site','www.eakzit.site','134.209.245.127','31.148.206.203','http://eakzit.site/']
 
 
 # Application definition
@@ -79,11 +79,11 @@ WSGI_APPLICATION = 'engyschool.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'engyschool',
-        'USER': 'paul',
-        'PASSWORD': 'timormortis',
+        'NAME': 'engy',
+        'USER': 'ronaldduck',
+        'PASSWORD': 'donaldduck',
         'HOST': 'localhost',
-        'PORT': '5433',
+        'PORT': '',
     }
 }
 
