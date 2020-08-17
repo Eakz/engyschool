@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {% bootstrap_css %}
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
   <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
   <link rel="stylesheet" href="{% static 'main/css/carousel.css' %}">
   <link rel="stylesheet" href="{% static 'main/css/navbar.css' %}">
@@ -16,13 +17,18 @@
 
   <title>English School</title>
   <style>
-    section#service {
+section#service {
     background: url('{% static "main/img/1.jpg" %}') no-repeat center
-        center/cover;
+        center/cover,linear-gradient(black,white,black);
+
+    background-blend-mode: multiply;
+  
 }
 section#contact {
     background: url('{% static "main/img/2.jpg" %}') no-repeat center
-        center/cover;
+        center/cover,center/cover,linear-gradient(black,white,black);
+        background-blend-mode: multiply;
+
 }
   </style>
 </head>
@@ -50,17 +56,18 @@ section#contact {
   </nav>
 
   <div data-spy="scroll" data-target=".navbar" data-offset="50" class="containeri">
-    <section class="container-fluid px-0" id="home">
+    <section class="container-fluid px-0" id="home" style="overflow-block: hidden;">
       <video id="vod" src="{% static 'main/img/vid1.mp4' %}" autoplay muted loop></video>
       <div class="jumbotron1">
-      <h1>Lucky Study це:<br/>
+      <h1 >Lucky Study це:<br/>
         <span class="txt-type" data-wait='3000' data-words='["навчання","спілкування","індивідуальний підхід", "доступність", "креативність"]'></span><span class="dash">&nbsp</span>
       </h1>
       <br>
       <hr>
-      <!-- <p>Change#2 dolor sit amet, consectetur adipisicing elit. Quo nesciunt explicabo nihil, cum necessitatibus
-        dolorem consequatur consequuntur soluta eius optio!</p> -->
+      <div id="wrapper_for_phone">
+       <a href="tel:+380677361623"><i id="phone" class="fas fa-phone-square" style="color:limegreen;font-size:4rem;padding-top:1rem"></i></a>
       </div>
+    </div>
       </section>
 
     <section class="container-fluid px-0 w-100" id="about">
@@ -72,8 +79,8 @@ section#contact {
                 <img class="min-vh-100" src="{% static 'main/img/a1.jpg' %}" alt="Los Angeles">
                 <div class="carousel-caption">
                   <div class="jumbotron">
-                    <h3>Los Angeles</h3>
-                    <p>We had such a great time in LA!</p>
+                    <h3>Групові заняття</h3>
+                    <p>4-6 людей в групі</p>
                   </div>
                 </div>
               </div>
@@ -83,8 +90,8 @@ section#contact {
                 <img class="min-vh-100" src="{% static 'main/img/a2.jpg' %}" alt="Los Angeles">
                 <div class="carousel-caption">
                   <div class="jumbotron">
-                    <h3>Los Angeles</h3>
-                    <p>We had such a great time in LA!</p>
+                    <h3>Індивідуальне навчання</h3>
+                    <p>Викладач складає програму в залежності від рівня знань студента</p>
                   </div>
                 </div>
               </div>
@@ -94,8 +101,8 @@ section#contact {
                 <img class="min-vh-100" src="{% static 'main/img/a3.jpg' %}" alt="Los Angeles">
                 <div class="carousel-caption">
                   <div class="jumbotron">
-                    <h3>Los Angeles</h3>
-                    <p>We had such a great time in LA!</p>
+                    <h3>Англійська для малюків 3+</h3>
+                    <p>Навчання через ігри і інтерактив з малечку</p>
                   </div>
                 </div>
               </div>
@@ -105,8 +112,8 @@ section#contact {
                 <img class="min-vh-100" src="{% static 'main/img/a4.jpg' %}" alt="Los Angeles">
                 <div class="carousel-caption">
                   <div class="jumbotron">
-                    <h3>Los Angeles</h3>
-                    <p>We had such a great time in LA!</p>
+                    <h3>Навчання онлайн</h3>
+                    <p>Для тих в кого обмаль часу і важко відірватися від справ</p>
                   </div>
                 </div>
               </div>
@@ -116,8 +123,8 @@ section#contact {
                 <img class="min-vh-100" src="{% static 'main/img/a5.jpg' %}" alt="Los Angeles">
                 <div class="carousel-caption">
                   <div class="jumbotron">
-                    <h3>Los Angeles</h3>
-                    <p>We had such a great time in LA!</p>
+                    <h3>Підготовка до ДПА і ЗНО</h3>
+                    <p>Тестування і інтенсив для тих хто готується на вищий бал</p>
                   </div>
                 </div>
               </div>
@@ -135,25 +142,51 @@ section#contact {
       </div>
     </section>
     <section class="container-fluid" id="service">
-      <h1>Welcome To My Site</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo nesciunt explicabo nihil, cum necessitatibus
-        dolorem consequatur consequuntur soluta eius optio!</p>
-    </section>
+      <div id="faq">
+      {% for i in faqs_up %}
+      <div class="question up">   
+         <div class="dropdown">
+        <div class="trigger">{{i.question}}</div>
+        <div class="content">
+        {{i.answer}}
+        </div>
+      </div>
+    </div>
+      {% endfor %}
+      {% for i in faqs_down %}
+      <div class="question down">   
+         <div class="dropdown">
+        <div class="trigger">{{i.question}}</div>
+        <div class="content">
+        {{i.answer}}
+        </div>
+      </div>
+    </div>
+      {% endfor %}
+
+    </div>
+      </section>
     <section class="container-fluid" id="contact">
-      <p style="margin-top: 10rem;background: rgba(0, 0, 0, 0.4);border: none;border-radius: 10px;padding: 10px;">Чекаємо вас по адресу: <br> м.Хмельницький, <br> вул.Синіх Карапузів 2, кв.1</p>
+      <div id="address">
+      <p>Чекаємо вас за адресою: <br> м.Хмельницький, <br> вул.Свободи 9а</p>
+        <br>
+      <span style="display: inline-block;"><a href=""><i id="instagram" class="fab fa-instagram"></i></a>
+      <a href=""><i id="facebook" class="fab fa-facebook-square"></i></a></span>
+
+    </div>
         <!-- https://www.google.com/maps/embed/v1/view?key=AIzaSyBM3fx3CCkam1zKRs84mSF6slgFOA_tENA&center=49.435231,27.001573 -->
-        <div style="overflow:hidden;resize:none;width:90vw;height:500px;border-radius: 10px;"><div id="gmapdisplay" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=khmelnitsky&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><a class="googlemaps-html" href="https://www.embed-map.com" id="grab-mapdata">https://www.embed-map.com</a><style>#gmapdisplay img{max-height:none;max-width:none!important;background:none!important;}</style></div>
-        <div style="width: 100vw;height: 5rem;background:rgba(0, 0, 0, 0.6);">&copy; EAkzit</div>
+        <div style="overflow:hidden;resize:none;width:90vw;height:500px;border-radius: 10px;box-shadow: 10px 5px 30px black;"><div id="gmapdisplay" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=khmelnitsky&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><a class="googlemaps-html" href="https://www.embed-map.com" id="grab-mapdata">https://www.embed-map.com</a><style>#gmapdisplay img{max-height:none;max-width:none!important;background:none!important;}</style></div>
+        <div style="width: 100vw;height: 5rem;background:rgba(0, 0, 0, 0.6);"><span style="opacity: 0.4;">&copy; EAkzit</span></div>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
     crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-    crossorigin="anonymous"></script>
-    <script src="{% static 'main/js/typewriter.js' %}"></script>
+    {% bootstrap_javascript jquery='full' %}
+        <script src="{% static 'main/js/typewriter.js' %}">
+    
+    </script>
 </body>
 
 </html>
