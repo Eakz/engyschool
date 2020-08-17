@@ -12,7 +12,7 @@ body {
     overflow: hidden;
 }
 .containeri {
-    width: 100vh;
+    width: 100%;
 }
 section {
     display: flex;
@@ -22,7 +22,7 @@ section {
     text-align: center;
     width: 100%;
     height: 100vh;
-    /* scroll-snap-align: center; */
+    scroll-snap-align: center;
     overflow: hidden;
 }
 hr {
@@ -41,21 +41,14 @@ section#home {
     overflow: hidden;
 }
 section #vod {
-    position: absolute fixed;
+    position: absolute;
     z-index: -1;
     width: 200vh;
 }
-section#about {
-    /* background: url('../img/2.jpg') no-repeat center center/cover; */
-}
-section#service {
-    background: url("../img/3.jpg") no-repeat center center/cover;
-}
-section#contact {
-    background: url("../img/4.jpg") no-repeat center center/cover;
-}
+
 @media screen and (max-width: 768px) {
     section #vod {
+        position: relative;
         height: auto;
         width: 100vh;
     }
