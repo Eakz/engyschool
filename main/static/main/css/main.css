@@ -141,6 +141,8 @@ section p {
     display: block;
     z-index: 50;
 }
+#middlerow {
+}
 @media screen and (max-width: 768px) {
     .dropdown {
         font-size: 1.5rem;
