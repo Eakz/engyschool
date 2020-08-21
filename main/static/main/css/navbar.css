@@ -1,40 +1,42 @@
-.navlinks{
+.navlinks {
     color: #ffff;
     letter-spacing: 3px;
     font-weight: bold;
     font-size: 1.1rem;
 }
 
-.nav-link{
+.nav-link {
     text-align: center;
     margin-left: 1.5rem;
     margin-right: 1rem;
 }
-.logo{
-    font-family: 'Josefin Sans', sans-serif;
+.logo {
+    font-family: "Josefin Sans", sans-serif;
 }
-#logo-title{
-  font-size: 1.6rem;
-  border-bottom:1px solid #fff;
-  padding-bottom: 0;
+#logo-title {
+    font-size: 1.6rem;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 0;
 }
-li > a{
+li > a {
     border: 1px rgba(0, 0, 0, 0) solid;
 }
-li > a:hover{ 
-    border:1px #ffff solid;
+li > a:hover {
+    border: 1px #ffff solid;
 }
-nav {background-color: rgba(0, 0, 0, 0.6);}
+nav {
+    background-color: rgba(0, 0, 0, 0.75);
+}
 
 /* Navlinks fill animtaion */
-.wrapper{
+.wrapper {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
+}
 
-  li > a{
+li > a {
     display: block;
     width: 200px;
     height: 40px;
@@ -43,19 +45,19 @@ nav {background-color: rgba(0, 0, 0, 0.6);}
     font-family: sans-serif;
     text-decoration: none;
     color: #333;
-    border: 2px solid rgba(0, 0, 0 , 0);
+    border: 2px solid rgba(0, 0, 0, 0);
     letter-spacing: 2px;
     text-align: center;
     position: relative;
-    transition: all .35s;
-  }
-  
-  li > a span{
+    transition: all 0.35s;
+}
+
+li > a span {
     position: relative;
     z-index: 2;
-  }
-  
-  li > a:after{
+}
+
+li > a:after {
     position: absolute;
     content: "";
     top: 0;
@@ -63,13 +65,13 @@ nav {background-color: rgba(0, 0, 0, 0.6);}
     width: 0;
     height: 100%;
     background: rgba(255, 255, 255, 0.3);
-    transition: all .35s;
-  }
-  
-  li > a:hover{
+    transition: all 0.35s;
+}
+
+li > a:hover {
     color: #fff;
-  }
-  
-  li > a:hover:after{
+}
+
+li > a:hover:after {
     width: 100%;
-  }
+}

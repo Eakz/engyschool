@@ -162,7 +162,7 @@ section p {
 }
 @media screen and (max-width: 768px) {
     .dropdown {
-        font-size: 1.5rem;
+        font-size: 0.9rem;
         z-index: +2;
         background: rgba(255, 255, 255, 0.6);
         border-radius: 10px;
@@ -171,18 +171,23 @@ section p {
         border: 5px solid black;
         min-width: 300px;
     }
+    .dropdown .content {
+        display: block;
+        padding-bottom: 2rem;
+        font-size: 0.9rem;
+    }
     .question {
         display: flex;
-        min-width: px;
         min-height: 300px;
         width: 100%;
         flex-direction: column;
         overflow-wrap: break-word;
+        margin: auto;
     }
     #faq {
         display: flex;
         flex-direction: row;
-        align-content: stretch;
+        align-items: center;
         /* justify-content: space-between; */
         width: 90%;
         height: 60%;
@@ -190,6 +195,7 @@ section p {
         background: rgba(0, 0, 0, 0.3);
     }
     .dropdown .trigger {
+        display: none;
         padding: 10px;
         position: relative;
         cursor: pointer;
@@ -198,8 +204,7 @@ section p {
     }
     .dropdown .content.active {
         border-top: 1px solid #ddd;
-        display: flex;
-        padding-bottom: 2rem;
+        display: block;
     }
 }
 
