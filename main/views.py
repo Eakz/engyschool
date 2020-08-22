@@ -2,13 +2,13 @@ import os
 from django.conf import settings
 from django.shortcuts import render
 from django.templatetags.static import static
-from .models import faq
+from .models import Faq
 
 # Create your views here.
 
 
 def index(request):
-    faqs = faq.objects.all()[0:6]
+    faqs = Faq.objects.all()[0:6]
     faqs_up = faqs[0:3]
     faqs_down = faqs[3:6]
     path = settings.MEDIA_ROOT

@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class faq(models.Model):
+class Faq(models.Model):
 
     question = models.TextField(blank=True, default='')
     answer = models.TextField(blank=True, default='')
