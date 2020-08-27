@@ -2,9 +2,11 @@ import os
 from django.conf import settings
 from django.shortcuts import render
 from django.templatetags.static import static
-from .models import Faq
+from . import models
 
 # Create your views here.
+
+Faq = models.Faq
 
 
 def index(request):
