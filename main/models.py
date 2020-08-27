@@ -9,3 +9,9 @@ class Faq(models.Model):
 
     def __str__(self):
         return self.question
+
+
+class Dood(models.Model):
+
+    name = models.CharField()
+    same = models.CharField()
