@@ -26,7 +26,7 @@ SECRET_KEY = '89z3jvr8jh$x6w!1)n--0%r7+bmzzrog(6ff-0&0t=#ii^i8qz'
 DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'eakzit.site', 'www.eakzit.site',
-                 '134.209.245.127', '31.148.206.203', 'http://eakzit.site/', 'de0289c1bec7.ngrok.io', '46.101.254.160']
+                 '134.209.245.127', '31.148.206.203', 'http://eakzit.site/', '46.101.254.160', 'http://www.luckystudy.com.ua/', 'www.luckystudy.com.ua', 'luckystudy.com.ua']
 
 
 # Application definition
