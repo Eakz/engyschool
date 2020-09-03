@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Dood
+from .models import Faq
 
 # Register your models here.
-admin.site.register(Dood)
+admin.site.register(Faq)
