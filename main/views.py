@@ -2,7 +2,7 @@ import os
 from django.conf import settings
 from django.shortcuts import render
 from django.templatetags.static import static
-# from .models import Faq
+from .models import Faq
 
 # Create your views here.
 
