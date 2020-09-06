@@ -25,8 +25,8 @@ SECRET_KEY = '89z3jvr8jh$x6w!1)n--0%r7+bmzzrog(6ff-0&0t=#ii^i8qz'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'www.eakzit.site',
-                 '134.209.245.127', '31.148.206.203', 'http://eakzit.site/', '46.101.254.160', 'http://www.luckystudy.com.ua/', 'www.luckystudy.com.ua', 'luckystudy.com.ua']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '46.101.254.160', 'http://www.luckystudy.com.ua/',
+                 'www.luckystudy.com.ua', 'luckystudy.com.ua', 'http://www.luckystudy.com.ua']
 
 
 # Application definition
