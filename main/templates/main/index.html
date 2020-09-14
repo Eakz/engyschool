@@ -9,13 +9,123 @@
   {% bootstrap_css %}
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
-  <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+  <!-- <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
   <link rel="stylesheet" href="{% static 'main/css/carousel.css' %}">
   <link rel="stylesheet" href="{% static 'main/css/navbar.css' %}">
   <link rel="stylesheet" href="{% static 'main/css/typewriter.css' %}">
-  <link rel="stylesheet" href="{% static 'main/css/scroll.css' %}">
+  <link rel="stylesheet" href="{% static 'main/css/scroll.css' %}"> -->
   <title>English School</title>
   <style>
+
+    .carousel-caption{
+      top: 80vh;
+      height: 10rem;
+  }
+  /* BS4 corrections*/
+  .jumbotron {
+      background-color: rgba(0, 0, 0, 0.4 );
+  }
+  @media screen and (max-width:768px){
+      .jumbotron{
+      position: relative;
+      bottom: 10rem;
+  }}
+  .navlinks {
+    color: #ffff;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.nav-link {
+    text-align: center;
+    margin-left: 1.5rem;
+    margin-right: 1rem;
+}
+.logo {
+    font-family: "Josefin Sans", sans-serif;
+}
+#logo-title {
+    font-size: 1.6rem;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 0;
+}
+li > a {
+    border: 1px rgba(0, 0, 0, 0) solid;
+}
+li > a:hover {
+    border: 1px #ffff solid;
+}
+nav {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+/* Navlinks fill animtaion */
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+li > a {
+    display: block;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #333;
+    border: 2px solid rgba(0, 0, 0, 0);
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all 0.35s;
+}
+
+li > a span {
+    position: relative;
+    z-index: 2;
+}
+
+li > a:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: all 0.35s;
+}
+
+li > a:hover {
+    color: #fff;
+}
+
+li > a:hover:after {
+    width: 100%;
+}
+.containeri {
+  width: 100vw;
+  height: 100%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+.txt-type{
+  font-size: 2rem;
+}
+/* Cursor */
+.txt-type>.txt{
+  animation: blink 1.5s linear;
+}
+@keyframes blink{
+  from,to {border-right: 0.2rem solid #cccccc;}
+  50% {border-right: 0.2rem solid transparent;}
+}
+  
 section#service {
     background: url('{% static "main/img/1.jpg" %}') no-repeat center
         center/cover,linear-gradient(black,white,black);
