@@ -1,7 +1,0 @@
-.containeri {
-    width: 100vw;
-    height: 100%;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
-}
