@@ -3,3 +3,4 @@ __pycache__/
 HTML_CSS
 .vscode
 engyvenv
+secret_key.py
