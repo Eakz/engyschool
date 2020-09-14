@@ -493,7 +493,7 @@ section p {
         </p>
       </div>
       <div id="faq">
-      {% for i in faqs_down %}
+      {% for i in faqsdown %}
       <div class="question down">   
          <div class="dropdown">
         {% if i.question|length > 28 %}
@@ -514,7 +514,7 @@ section p {
     </div>
       {% endfor %}
 
-      {% for i in faqs_up %}
+      {% for i in faqsup %}
       <div class="question up">   
          <div class="dropdown">
         {% if i.question|length > 28 %}

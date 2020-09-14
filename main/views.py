@@ -9,8 +9,8 @@ from .models import Faq
 
 def index(request):
     faqs = Faq.objects.all()[0:6]
-    faqs_up = faqs[0:3]
-    faqs_down = faqs[3:6]
+    faqsup = faqs[0:3]
+    faqsdown = faqs[3:6]
     path = settings.MEDIA_ROOT
-    context = {'images': path, 'faqs_up': faqs_up, 'faqs_down': faqs_down}
+    context = {'images': path, 'faqsup': faqsup, 'faqsdown': faqsdown}
     return render(request, "main/index.html", context)
